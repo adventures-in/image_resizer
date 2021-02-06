@@ -2,6 +2,15 @@
 
 Replicating the [Resize Images Firebase Extension](https://firebase.google.com/products/extensions/storage-resize-images) using the [Dart Functions Framework](https://github.com/GoogleCloudPlatform/functions-framework-dart).
 
+## Configure GCP project for running on Cloud Run
+
+[Trigger Cloud Run with events from Eventarc](https://codelabs.developers.google.com/codelabs/cloud-run-events#4)
+
+## Reviewing logs 
+
+<https://console.cloud.google.com/logs/query;timeRange=PT1H?project=...>
+
+
 ## A Dart function handles CloudEvents
 
 CloudEvent function handlers don't return a response to send to the event
