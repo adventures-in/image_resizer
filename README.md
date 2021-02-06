@@ -1,6 +1,8 @@
-# Basic CloudEvent example
+# Automatically resize images uploaded to Google Cloud Storage
 
-This example demonstrates writing a function to handle a CloudEvent.
+Replicating the [Resize Images Firebase Extension](https://firebase.google.com/products/extensions/storage-resize-images) using the [Dart Functions Framework](https://github.com/GoogleCloudPlatform/functions-framework-dart).
+
+## A Dart function handles CloudEvents
 
 CloudEvent function handlers don't return a response to send to the event
 producter. They generally perform some work and print output for logging.
@@ -22,30 +24,7 @@ FutureOr<void> function(CloudEvent event, RequestContext context) async {
 }
 ```
 
-The full code of the function for this example is shown below:
-
-`lib/functions.dart`
-
-```dart
-import 'dart:convert';
-import 'dart:io';
-
-import 'package:functions_framework/functions_framework.dart';
-
-const _encoder = JsonEncoder.withIndent(' ');
-
-@CloudFunction()
-void function(CloudEvent event, RequestContext context) {
-  context.logger.info('event subject: ${event.subject}');
-  stderr.writeln(_encoder.convert(event));
-}
-```
-
-All the function does is log the source and subject of the CloudEvent that
-triggered it, and then prints out the entire event JSON object for informational
-purposes.
-
-## Generate project files
+## Generate server.dart
 
 The Dart `build_runner` tool generates `bin/server.dart`, the main entry point
 for the function server app, which invokes the function in `lib/functions.dart`.
@@ -62,14 +41,14 @@ $ dart run build_runner build
 [INFO] Succeeded after 51ms with 0 outputs (0 actions)
 ```
 
-## Test the function
+## Running tests
 
 ```shell
 $ dart test
 00:02 +1: All tests passed!
 ```
 
-## Run the function
+## Testing the function locally
 
 The default signature type for a function is for handling normal HTTP requests.
 When running a function for handling a cloudevent, you must either set
@@ -103,8 +82,7 @@ Dart scripts examples under the `examples/raw_cloudevent/tool` directory:
 - `dart run tool/binary_mode_request.dart`
 - `dart run tool/structured_mode_request.dart`
 
-For more details on getting started or to see how to run the function locally on
-Docker or deploy to Cloud Run, see these quick start guides:
+For more details see quick start guides:
 
 - [Quickstart: Dart]
 - [Quickstart: Docker]
