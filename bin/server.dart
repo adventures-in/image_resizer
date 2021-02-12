@@ -1,3 +1,5 @@
+// @dart=2.9
+
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // Copyright 2021 Google LLC
 //
