@@ -11,8 +11,10 @@ void function(CloudEvent event, RequestContext context) {
   // context.logger
   //     .info('[CloudEvent] source: ${event.source}, subject: ${event.subject}');
 
-  final pubSub = PubSub.fromJson(event.data as Map<String, dynamic>);
+  // final pubSub = PubSub.fromJson(event.data as Map<String, dynamic>);
+  // context.logger.info('PubSub: $pubSub');
 
-  context.logger.info('PubSub: $pubSub');
+  context.logger.info('CloudEvent toJson: ${event.toJson()}');
+
   // stderr.writeln(_encoder.convert(event));
 }
