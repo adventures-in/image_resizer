@@ -28,7 +28,7 @@ Future<TestProcess> startServerTest({
     ...arguments,
     if (expectedListeningPort == 0) ...['--port', '0'],
   ];
-  final proc = await TestProcess.start('dart', args, environment: env);
+  final proc = await TestProcess.start('dart', args, environment: env!);
 
   if (!shouldFail) {
     final output = await proc.stdout.next;
