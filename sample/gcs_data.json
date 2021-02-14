@@ -1,0 +1,85 @@
+{
+  "id": "projects/the-process-tool/logs/cloudaudit.googleapis.com%2Fdata_access-5t9k14e2cin61613195693830426",
+  "source":"//cloudaudit.googleapis.com/projects/the-process-tool/logs/data_access",
+  "specversion":"1.0",
+  "type":"google.cloud.audit.log.v1.written",
+  "datacontenttype":"application/json; charset=utf-8",
+  "data": {
+    "protoPayload": {
+      "status":{},
+      "authenticationInfo":{
+        "principalEmail":"Nick.Meinhold@gmail.com"
+      },
+      "requestMetadata":{
+        "callerIp":"180.216.75.149",
+        "callerSuppliedUserAgent":"apitools Python/3.8.5 gsutil/4.57 (darwin) analytics/enabled interactive/True command/cp google-cloud-sdk/323.0.0,gzip(gfe)",
+        "requestAttributes":{"time":"2021-02-13T05:54:53.836669309Z",
+          "auth":{}
+        },
+        "destinationAttributes":{}
+      },"serviceName":"storage.googleapis.com",
+      "methodName":"storage.objects.create",
+      "authorizationInfo":[
+        {
+          "resource":"projects/_/buckets/cr-bucket-the-process-tool/objects/random.txt",
+          "permission":"storage.objects.create",
+          "granted":true,
+          "resourceAttributes":{}
+        },
+        {
+          "resource":"projects/_/buckets/cr-bucket-the-process-tool/objects/random.txt",
+          "permission":"storage.objects.delete",
+          "granted":true,
+          "resourceAttributes":{}
+        }
+      ],
+      "resourceName":"projects/_/buckets/cr-bucket-the-process-tool/objects/random.txt",
+      "serviceData":{
+        "policyDelta":{
+          "bindingDeltas":[
+            {
+              "role":"roles/storage.legacyObjectOwner",
+              "member":"projectOwner:the-process-tool",
+              "action":"ADD"
+            },
+            {
+              "member":"projectEditor:the-process-tool",
+              "role":"roles/storage.legacyObjectOwner",
+              "action":"ADD"
+            },
+            {
+              "member":"user:Nick.Meinhold@gmail.com",
+              "role":"roles/storage.legacyObjectOwner",
+              "action":"ADD"
+            },
+            {
+              "role":"roles/storage.legacyObjectReader",
+              "action":"ADD",
+              "member":"projectViewer:the-process-tool"
+            }
+          ]
+        },
+        "@type":"type.googleapis.com/google.iam.v1.logging.AuditData"
+      },
+      "resourceLocation":{
+        "currentLocations":["us-east1"]
+      }
+    },
+    "insertId":"-5t9k14e2cin6",
+    "resource":{
+      "type":"gcs_bucket",
+      "labels":{
+        "location":"us-east1",
+        "bucket_name":"cr-bucket-the-process-tool",
+        "project_id":"the-process-tool"
+      }
+    },
+    "timestamp":"2021-02-13T05:54:53.830426609Z",
+    "severity":"INFO",
+    "logName":"projects/the-process-tool/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp":"2021-02-13T05:54:54.418971187Z"
+  },
+  "dataschema":"https://googleapis.github.io/google-cloudevents/jsonschema/google/events/cloud/audit/v1/LogEntryData.json",
+  "subject":"storage.googleapis.com/projects/_/buckets/cr-bucket-the-process-tool/objects/random.txt",
+  "time":"2021-02-13T05:54:54.418971Z"
+}
