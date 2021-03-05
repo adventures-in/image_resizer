@@ -14,8 +14,9 @@ FutureOr<void> function(CloudEvent event, RequestContext context) async {
       await clientViaApplicationDefaultCredentials(scopes: []);
   final storageApi = StorageApi(serviceClient);
 
-  final buckets = await storageApi.buckets.list('the-process-tool');
-  for (var bucket in buckets.items) {
+  final bucketItems = (await storageApi.buckets.list('the-process-tool')).items;
+  if (bucketItems == null) return;
+  for (var bucket in bucketItems) {
     print(bucket.name);
   }
 
@@ -24,6 +25,6 @@ FutureOr<void> function(CloudEvent event, RequestContext context) async {
   final objectName = parts.elementAt(parts.indexOf('objects') + 1);
 
   final media = await storageApi.objects.get(bucketName, objectName,
-      downloadOptions: DownloadOptions.FullMedia) as Media;
+      downloadOptions: DownloadOptions.fullMedia) as Media;
   print(media.contentType);
 }
