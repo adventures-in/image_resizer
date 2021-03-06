@@ -3,7 +3,7 @@
 ## Locally in a container
 
 ```shell
-$ cd examples/hello
+$ cd image_resizer
 $ docker build -t app .
 ...
 

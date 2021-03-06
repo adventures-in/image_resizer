@@ -1,4 +1,4 @@
-import 'package:dartimageresize/src/pub_sub_message.dart';
+import 'package:image_resizer/src/pub_sub_message.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'pub_sub.g.dart';
