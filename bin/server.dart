@@ -1,5 +1,3 @@
-// @dart=2.9
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // Copyright 2021 Google LLC
 //
@@ -22,7 +20,7 @@ Future<void> main(List<String> args) async {
   await serve(args, _nameToFunctionTarget);
 }
 
-FunctionTarget _nameToFunctionTarget(String name) {
+FunctionTarget? _nameToFunctionTarget(String name) {
   switch (name) {
     case 'function':
       return FunctionTarget.cloudEventWithContext(
