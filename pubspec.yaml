@@ -7,6 +7,12 @@ publish_to: none
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
+# functions_framework has not been published for a while so we must use a git
+# dependency and as the functions_framework_builder depends on it's own 
+# functions_framework we must override the functions_framework dependency.
+# 
+# build_runner currently depends on io ^0.3.0 while functions_framework depends 
+# on ^1.0.0 so we override it
 dependency_overrides:
   io: ^1.0.0
   functions_framework:
