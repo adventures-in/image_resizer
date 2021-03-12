@@ -15,3 +15,6 @@ doc/api/
 # Ignore generated files.
 *.freezed.dart
 *.g.dart
+
+# Project specific test data
+test/data/project_specific/

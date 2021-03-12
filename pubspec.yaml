@@ -17,13 +17,13 @@ dependency_overrides:
   io: ^1.0.0
   functions_framework:
     git:
-      url: git@github.com:GoogleCloudPlatform/functions-framework-dart.git
+      url: https://github.com/GoogleCloudPlatform/functions-framework-dart.git
       path: functions_framework
 
 dependencies:
   functions_framework:
     git:
-      url: git@github.com:GoogleCloudPlatform/functions-framework-dart.git
+      url: https://github.com/GoogleCloudPlatform/functions-framework-dart.git
       path: functions_framework
   shelf: any
   json_annotation: any
@@ -34,7 +34,7 @@ dev_dependencies:
   build_runner: any
   functions_framework_builder:
     git:
-      url: git@github.com:GoogleCloudPlatform/functions-framework-dart.git
+      url: https://github.com/GoogleCloudPlatform/functions-framework-dart.git
       path: functions_framework_builder
   http: any
   test: any

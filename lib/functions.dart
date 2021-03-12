@@ -27,4 +27,5 @@ FutureOr<void> function(CloudEvent event, RequestContext context) async {
   final media = await storageApi.objects.get(bucketName, objectName,
       downloadOptions: DownloadOptions.fullMedia) as Media;
   print(media.contentType);
+  context.logger.info('[Media] type: ${media.contentType}');
 }
