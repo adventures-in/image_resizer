@@ -4,7 +4,8 @@
 
 # Omit commiting pubspec.lock for library packages:
 # https://dart.dev/guides/libraries/private-files#pubspeclock
-pubspec.lock
+# EDIT: adding to version control during development 
+# pubspec.lock
 
 # Conventional directory for build outputs
 build/
