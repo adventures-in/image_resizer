@@ -20,4 +20,6 @@ Use curl to send a sample cloud event:
 curl --data-binary @sample/gcs_data.json -H 'content-type: application/json' -w '%{http_code}\n' localhost:8080
 ```
 
+The file `gcs_data.json` contains test data, obtained following [Get Test Data](get_test_data.md)
+
 BOOM!... bugs begone!
