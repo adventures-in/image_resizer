@@ -27,8 +27,9 @@ dependencies:
       path: functions_framework
   shelf: any
   json_annotation: any
-  googleapis: ^2.0.0
-  googleapis_auth: ^1.0.0
+  googleapis: any
+  googleapis_auth: any
+  image: any
 
 dev_dependencies:
   build_runner: any

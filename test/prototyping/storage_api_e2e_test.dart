@@ -5,6 +5,12 @@ import 'package:test/test.dart';
 void main() {
   group('StorageApi', () {
     test('test', () async {
+      // final bucketItems = (await storageApi.buckets.list('the-process-tool')).items;
+      // if (bucketItems == null) return;
+      // for (var bucket in bucketItems) {
+      //   print(bucket.name);
+      // }
+
       // final json = readFromFile
       // final accountCredentials = ServiceAccountCredentials.fromJson(json);
       // final serviceClient = await clientViaServiceAccount(
@@ -16,5 +22,5 @@ void main() {
       //     downloadOptions: DownloadOptions.FullMedia) as Media;
       // print(media.contentType);
     });
-  });
+  }, skip: true);
 }
