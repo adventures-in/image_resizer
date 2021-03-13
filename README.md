@@ -1,6 +1,8 @@
 # Automatically resize images uploaded to Google Cloud Storage
 
-A port of the [Resize Images Firebase Extension](https://firebase.google.com/products/extensions/storage-resize-images) with [Dart Functions Framework](https://github.com/GoogleCloudPlatform/functions-framework-dart).
+A [Dart Functions Framework](https://github.com/GoogleCloudPlatform/functions-framework-dart) project inspired by the [Resize Images Firebase Extension](https://firebase.google.com/products/extensions/storage-resize-images).
+
+[Notes](https://docs.google.com/document/d/1PYeSgfAjoRGn09nK1j-s0cfQkz1kJfV_rg5Al6YQ3Bs/edit?usp=sharing)
 
 ## Quickstart
 
